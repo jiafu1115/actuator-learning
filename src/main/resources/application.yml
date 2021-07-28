@@ -3,11 +3,15 @@ management:
   metrics:
     enable:
       kafka: true
+    export:
+      influx:
+        enabled: true
 
-  endpoints:
-    web:
-      exposure:
-        include: myendpoint,health,prometheus,metrics,loggers,info,startup
+
+    endpoints:
+      web:
+        exposure:
+          include: myendpoint,health,prometheus,metrics,loggers,info,startup
 
   endpoint:
     health:
@@ -21,5 +25,7 @@ management:
       enabled: true
     cassandra:
       enabled: true
+
+
 
 

@@ -1,0 +1,25 @@
+
+management:
+  metrics:
+    enable:
+      kafka: true
+
+  endpoints:
+    web:
+      exposure:
+        include: myendpoint,health,prometheus,metrics,loggers,info,startup
+
+  endpoint:
+    health:
+      show-details: always
+      show-components: always
+
+  health:
+    db:
+      enabled: true
+    redis:
+      enabled: false
+    cassandra:
+      enabled: true
+
+
